@@ -1,0 +1,70 @@
+---
+title: "Elite Grade 1, 2018"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+library(tidyverse)
+
+# Load the data from github
+neg01 <- read_csv("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/20181111_MAG_British_EG_01.csv")
+
+# Clean-up column names
+colnames(neg01) <- gsub('[/| ]','', tolower(colnames(neg01)))
+
+# Pivot the data, adding a rank by result and event.
+# Note that ties are handled using random. So, if a two subjects placed third overall
+# or in an event, within this scheme one will be assigned third and the other fourth.
+neg01 <- neg01 %>% 
+  mutate(rank.overall = rank(rank, ties.method = "random")) %>% 
+  gather(key="event", value="score", -rank, -rank.overall, -name, -bib, -region) %>%
+  group_by(event) %>%
+  mutate(rank.event = rank(-score, ties.method = "random")) %>%
+  ungroup()
+
+```
+
+# Exploratory Analysis
+
+## Overall Score
+
+```{r overall}
+neg01 %>%
+  mutate(rank.event = factor(rank.event)) %>%
+  filter(event != 'indtotal') %>%
+  filter(rank < 60) %>%
+  ggplot( aes(x = reorder(name, score), y = score, fill=event)) +
+  geom_bar(stat = "identity")  +  
+  labs(x = "Name", y = "Overall Score")  +
+  theme(axis.text.x = element_text(colour="grey20",size=10,angle=0,hjust=.5,vjust=.5,face="plain"),
+        axis.text.y = element_text(colour="grey20",size=6,angle=0,hjust=1,vjust=0,face="plain"),  
+        axis.title.x = element_text(colour="grey20",size=14,angle=0,hjust=.5,vjust=0,face="plain"),
+        axis.title.y = element_text(colour="grey20",size=14,angle=90,hjust=.5,vjust=.5,face="plain")) +
+  coord_flip() 
+```
+
+## Distribution of Scores
+
+### Histogram
+
+```{r histogram}
+neg01 %>% 
+  filter(event != 'indtotal') %>% 
+  ggplot(aes(x=score, fill=event)) + 
+  geom_histogram() +
+  facet_grid(event~.)
+```
+
+### Boxplot
+
+```{r boxplot}
+neg01 %>% 
+  filter(event != 'indtotal') %>% 
+  ggplot(aes(x=event, y=score, fill=event)) + 
+  geom_boxplot() +
+  geom_point()
+``` 

@@ -11,15 +11,15 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(tidyverse)
 
 # Load the data from github
-neg01 <- read_csv("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/20181111_MAG_British_EG_01.csv")
+neg01_raw <- read_csv("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/20181111_MAG_British_EG_01.csv")
 
 # Clean-up column names
-colnames(neg01) <- gsub('[/| ]','', tolower(colnames(neg01)))
+colnames(neg01_raw) <- gsub('[/| ]','', tolower(colnames(neg01_raw)))
 
 # Pivot the data, adding a rank by result and event.
 # Note that ties are handled using random. So, if a two subjects placed third overall
 # or in an event, within this scheme one will be assigned third and the other fourth.
-neg01 <- neg01 %>% 
+neg01 <- neg01_raw %>% 
   mutate(rank.overall = rank(rank, ties.method = "random")) %>% 
   gather(key="event", value="score", -rank, -rank.overall, -name, -bib, -region) %>%
   group_by(event) %>%
@@ -68,3 +68,23 @@ neg01 %>%
   geom_boxplot() +
   geom_point()
 ``` 
+
+
+## Correlation
+
+### Correlation Matrix (Pearson)
+
+```{r correlation_matrix_pearson}
+neg01_raw %>%
+  select(-(bib:region)) %>%
+  PerformanceAnalytics::chart.Correlation()
+```
+
+### Correlation Matrix (Spearman)
+
+```{r correlation_matrix_spearman}
+neg01_raw %>%
+  select(-(bib:region)) %>%
+  PerformanceAnalytics::chart.Correlation(method = "spearman")
+```
+

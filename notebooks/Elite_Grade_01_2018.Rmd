@@ -88,3 +88,13 @@ neg01_raw %>%
   PerformanceAnalytics::chart.Correlation(method = "spearman")
 ```
 
+### Distribution
+
+```{r Violin}
+neg01 %>%
+  ggplot(aes(x='dummy', y=score)) +
+  geom_violin(alpha = 0.2, fill = "blue") +
+  geom_point(alpha = 0.7) +
+  facet_wrap(~event, ncol = 2, scales = "free_y") +
+  theme(axis.text.x=element_blank())
+```

@@ -9,6 +9,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 library(tidyverse)
+suppressWarnings(library(ggdendro))
 
 # Load the data from github
 neg01_raw <- read_csv("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/20181111_MAG_British_EG_01.csv")
@@ -105,3 +106,21 @@ plot(hclust(dist(t(neg01_raw[4:10])), method="ward.D"), main="Events", xlab="", 
 ```
 
 How to do same in ggplot?
+
+```{r hierarchical_ggplot}
+theme_set(theme_bw())
+
+hc <- hclust(dist(t(neg01_raw[4:10]))) 
+
+ggdendrogram(hc, rotate = TRUE, size = 2) +
+  theme(axis.text.x = element_blank())
+```
+
+## Predicting PPP
+```{r important_event}
+model <- lm(ppp ~  pommel + floor + rings + vault + pbars + hbar , neg01_raw)
+
+summary(model)
+```
+
+summary(model1)

@@ -12,7 +12,7 @@ library(tidyverse)
 suppressWarnings(library(ggdendro))
 
 # Load the data from github
-neg01_raw <- read_csv("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/20181111_MAG_British_EG_01.csv")
+neg01_raw <- read_csv("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/20171103_MAG_British_EG_01.csv")
 
 # Clean-up column names
 colnames(neg01_raw) <- gsub('[/| ]','', tolower(colnames(neg01_raw)))

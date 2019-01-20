@@ -1,42 +1,41 @@
-POS E,,q No, Name, Team,Floor,Pommel,Rings,Vault,APP,P Bars,H Bar,PPP,TOTAL
-1,,104, Lazarus Benjamin, North West,9,9.8,9.35,9.5,9.3,9.05,9.15,9,74.15
-2,,102, Finlay Dunne, North West,8.6,9.75,9.35,9.4,9,9.1,9.15,9.5,73.85
-3,,132, Oscar Harper, Wales,9.4,9.1,8.85,9.5,9,8.75,9.35,9,72.95
-4,,109, Ben Johnstone, Scotland,9.1,9.2,8.75,9.25,9.2,8.95,9.3,9.1,72.85
-5,,124, Anton Adewale, South East,9.35,9.35,8.8,9.6,8.9,8.4,8.8,9.4,72.6
-6,,129, Myron Francis, London,9,9.35,9.25,9.35,8.9,9.05,8.45,9.2,72.55
-7,,128, Jamie Brennan, London,8.5,9.05,9.2,9.5,8.9,8.95,9.05,9.3,72.45
-8,,117, Daniel Mock, South West,8.45,9.6,8.95,9.4,8.8,8.95,8.8,9.1,72.05
-9,,133, Rhys Griffiths, Wales,9.2,8.7,8.55,9.4,9,9,9.15,9,72
-10,,130, Robert Shaw, London,8.9,9.15,9.1,9.45,9.2,8.7,8.85,8.2,71.55
-11,,114, Euan Banks, East,9.4,8.85,8.65,9.4,9.3,8.5,8.4,7.6,70.1
-12,,105, Kai Fellows, West Midlands,8.7,9.75,8.2,9.45,8.4,8.7,8.8,8,70
-13,,108, Jaiden Khan, West Midlands,9,8.95,6.4,9.3,8.6,9.1,9.25,8.9,69.5
-14,,125, Christian Fuoco, South East,8.75,9.3,8.2,9.45,9.4,8.5,8.9,6.9,69.4
-15,,103, Nathan Todosijczuk, North West,8.55,9.25,8.25,9.35,8.4,8.5,8.65,8.4,69.35
-16,,107, Thomas Hobbins, West Midlands,8.7,9.55,7.5,9.45,8.9,8.4,8.75,7.8,69.05
-17,=,106, Luca Marsella, West Midlands,8.7,9.8,7,9.2,8.7,8.55,9.1,7.8,68.85
-17,=,126, Laurence Butler, South East,9.05,9.5,7.25,9.25,8.7,9.05,8.85,7.2,68.85
-19,,116, Michael Ridgway, East,8,9.65,7.65,9.65,8.4,8.45,9.1,7.5,68.4
-20,,139, Jack Stanley, Yorkshire,8.6,9.2,8.15,9.65,8.8,7.4,8.65,7.4,67.85
-21,,113, Anton Anderson, East,8.3,9.05,7.1,9.2,8.3,8.75,8.9,8.1,67.7
-22,,115, Ryan Cirino, East,7.9,9,8.25,9.05,7.9,8.8,9,7,66.9
-23,,100, Ethan Adlard, North West,8.05,9,7.4,9.4,8.9,8.45,8.35,7.2,66.75
-24,,134, Sammy Morgan, Wales,8.45,9.05,7.25,9,8.4,8.6,8.95,6.9,66.6
-25,,101, Aled Davies-Williams, North West,7.8,9.2,8.3,9.1,8.1,7.8,8.6,6.6,65.5
-26,,121, Harry Lucas, South West,8.1,9.1,6.1,8.6,8.8,7.45,9.2,7.9,65.25
-27,,119, Hadyn May, South West,8.1,8.45,6.55,8.65,9.2,7.85,8,8,64.8
-28,,138, Ethan Hryndyj, Yorkshire,8.05,8.4,7.65,9.25,8.3,7.15,8.7,7.1,64.6
-29,,120, Harry Baxter, South West,8.1,8.8,6.55,9.25,8.4,8.2,7.9,7.2,64.4
-30,,127, Charlie Rose, South East,8.85,8.6,6.8,9.15,9.6,8.4,7.45,5.5,64.35
-31,,111, Kieran Burch, East,8.8,9.15,6.6,9.2,8.6,8.35,8.1,5.5,64.3
-32,,112, Nicholas Sypula, East,8.15,8.6,7.3,9.2,8,8.05,8.9,5.9,64.1
-33,,123, William Smith, South East,8.6,9.05,6.9,9.2,9,7.25,8.25,5.8,64.05
-34,,118, Iwan Scrivens, South West,7.8,9.1,4.05,9.2,9.1,7.65,8.6,8.1,63.6
-35,,137, Liam Jury, East Midlands,8.4,8.6,6.85,9.5,7.6,7.4,8.1,6.4,62.85
-36,,122, Ishu Ingale, South West,7.45,9.5,6.45,8.5,8.6,8.65,8.35,5.1,62.6
-37,,131, Daniel Kekeh, London,7.7,8.35,7.25,8.4,8.2,7.4,8.85,6,62.15
-38,,135, Joseph Ward, East Midlands,8.4,8.25,6.85,9.4,8.3,6.8,7.15,6.1,61.25
-39,,136, Luke Harrington, East Midlands,7.55,8.85,6.65,8.6,8.2,6.65,7.05,4.4,57.95
-40,,110, Jude Bannatyne, Scotland,6.55,8.7,6.3,9.1,7.1,6.8,6.05,4.1,54.7
-,,,,,,,,,,,,,
+Bib,Name,Region,Floor,Pommel,Rings,Vault,APP,P/Bars,H/Bar,PPP,Ind Total,Rank
+104, Lazarus Benjamin, North West,9,9.8,9.35,9.5,9.3,9.05,9.15,9,74.15,1
+102, Finlay Dunne, North West,8.6,9.75,9.35,9.4,9,9.1,9.15,9.5,73.85,2
+132, Oscar Harper, Wales,9.4,9.1,8.85,9.5,9,8.75,9.35,9,72.95,3
+109, Ben Johnstone, Scotland,9.1,9.2,8.75,9.25,9.2,8.95,9.3,9.1,72.85,4
+124, Anton Adewale, South East,9.35,9.35,8.8,9.6,8.9,8.4,8.8,9.4,72.6,5
+129, Myron Francis, London,9,9.35,9.25,9.35,8.9,9.05,8.45,9.2,72.55,6
+128, Jamie Brennan, London,8.5,9.05,9.2,9.5,8.9,8.95,9.05,9.3,72.45,7
+117, Daniel Mock, South West,8.45,9.6,8.95,9.4,8.8,8.95,8.8,9.1,72.05,8
+133, Rhys Griffiths, Wales,9.2,8.7,8.55,9.4,9,9,9.15,9,72,9
+130, Robert Shaw, London,8.9,9.15,9.1,9.45,9.2,8.7,8.85,8.2,71.55,10
+114, Euan Banks, East,9.4,8.85,8.65,9.4,9.3,8.5,8.4,7.6,70.1,11
+105, Kai Fellows, West Midlands,8.7,9.75,8.2,9.45,8.4,8.7,8.8,8,70,12
+108, Jaiden Khan, West Midlands,9,8.95,6.4,9.3,8.6,9.1,9.25,8.9,69.5,13
+125, Christian Fuoco, South East,8.75,9.3,8.2,9.45,9.4,8.5,8.9,6.9,69.4,14
+103, Nathan Todosijczuk, North West,8.55,9.25,8.25,9.35,8.4,8.5,8.65,8.4,69.35,15
+107, Thomas Hobbins, West Midlands,8.7,9.55,7.5,9.45,8.9,8.4,8.75,7.8,69.05,16
+106, Luca Marsella, West Midlands,8.7,9.8,7,9.2,8.7,8.55,9.1,7.8,68.85,17
+126, Laurence Butler, South East,9.05,9.5,7.25,9.25,8.7,9.05,8.85,7.2,68.85,17
+116, Michael Ridgway, East,8,9.65,7.65,9.65,8.4,8.45,9.1,7.5,68.4,19
+139, Jack Stanley, Yorkshire,8.6,9.2,8.15,9.65,8.8,7.4,8.65,7.4,67.85,20
+113, Anton Anderson, East,8.3,9.05,7.1,9.2,8.3,8.75,8.9,8.1,67.7,21
+115, Ryan Cirino, East,7.9,9,8.25,9.05,7.9,8.8,9,7,66.9,22
+100, Ethan Adlard, North West,8.05,9,7.4,9.4,8.9,8.45,8.35,7.2,66.75,23
+134, Sammy Morgan, Wales,8.45,9.05,7.25,9,8.4,8.6,8.95,6.9,66.6,24
+101, Aled Davies-Williams, North West,7.8,9.2,8.3,9.1,8.1,7.8,8.6,6.6,65.5,25
+121, Harry Lucas, South West,8.1,9.1,6.1,8.6,8.8,7.45,9.2,7.9,65.25,26
+119, Hadyn May, South West,8.1,8.45,6.55,8.65,9.2,7.85,8,8,64.8,27
+138, Ethan Hryndyj, Yorkshire,8.05,8.4,7.65,9.25,8.3,7.15,8.7,7.1,64.6,28
+120, Harry Baxter, South West,8.1,8.8,6.55,9.25,8.4,8.2,7.9,7.2,64.4,29
+127, Charlie Rose, South East,8.85,8.6,6.8,9.15,9.6,8.4,7.45,5.5,64.35,30
+111, Kieran Burch, East,8.8,9.15,6.6,9.2,8.6,8.35,8.1,5.5,64.3,31
+112, Nicholas Sypula, East,8.15,8.6,7.3,9.2,8,8.05,8.9,5.9,64.1,32
+123, William Smith, South East,8.6,9.05,6.9,9.2,9,7.25,8.25,5.8,64.05,33
+118, Iwan Scrivens, South West,7.8,9.1,4.05,9.2,9.1,7.65,8.6,8.1,63.6,34
+137, Liam Jury, East Midlands,8.4,8.6,6.85,9.5,7.6,7.4,8.1,6.4,62.85,35
+122, Ishu Ingale, South West,7.45,9.5,6.45,8.5,8.6,8.65,8.35,5.1,62.6,36
+131, Daniel Kekeh, London,7.7,8.35,7.25,8.4,8.2,7.4,8.85,6,62.15,37
+135, Joseph Ward, East Midlands,8.4,8.25,6.85,9.4,8.3,6.8,7.15,6.1,61.25,38
+136, Luke Harrington, East Midlands,7.55,8.85,6.65,8.6,8.2,6.65,7.05,4.4,57.95,39
+110, Jude Bannatyne, Scotland,6.55,8.7,6.3,9.1,7.1,6.8,6.05,4.1,54.7,40

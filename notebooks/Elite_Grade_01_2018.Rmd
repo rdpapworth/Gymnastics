@@ -8,24 +8,41 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
-library(tidyverse)
+suppressWarnings(library(tidyverse))
 suppressWarnings(library(ggdendro))
 
-# Load the data from github
-neg01_raw <- read_csv("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/20171103_MAG_British_EG_01.csv")
+years.seq <- seq(2013, 2018)
 
-# Clean-up column names
-colnames(neg01_raw) <- gsub('[/| ]','', tolower(colnames(neg01_raw)))
+get.results <- function(yyyy){
+  url <- paste0("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/MAG_British_EG_01_", yyyy, ".csv")
+  
+  # Load the data from github
+  neg01_raw <- read_csv(url)
+  
+  # Clean-up column names
+  colnames(neg01_raw) <- gsub('[/| ]','', tolower(colnames(neg01_raw)))
 
-# Pivot the data, adding a rank by result and event.
-# Note that ties are handled using random. So, if a two subjects placed third overall
-# or in an event, within this scheme one will be assigned third and the other fourth.
-neg01 <- neg01_raw %>% 
-  mutate(rank.overall = rank(rank, ties.method = "random")) %>% 
-  gather(key="event", value="score", -rank, -rank.overall, -name, -bib, -region) %>%
-  group_by(event) %>%
-  mutate(rank.event = rank(-score, ties.method = "random")) %>%
-  ungroup()
+  
+  # Pivot the data, adding a rank by result and event.
+  # Note that ties are handled using random. So, if a two subjects placed third overall
+  # or in an event, within this scheme one will be assigned third and the other fourth.
+  neg01 <- neg01_raw %>% 
+    mutate(rank.overall = rank(rank, ties.method = "random")) %>% 
+    gather(key="event", value="score", -rank, -rank.overall, -name, -bib, -region) %>%
+    group_by(event) %>%
+    mutate(rank.event = rank(-score, ties.method = "random")) %>%
+    ungroup()
+  
+  neg01$yyyy <- yyyy
+  
+  return(neg01)
+
+}
+
+all.results <- bind_rows(map(years.seq, get.results))
+
+
+
 
 ```
 
@@ -46,6 +63,7 @@ neg01 %>%
         axis.title.x = element_text(colour="grey20",size=14,angle=0,hjust=.5,vjust=0,face="plain"),
         axis.title.y = element_text(colour="grey20",size=14,angle=90,hjust=.5,vjust=.5,face="plain")) +
   coord_flip() 
+
 ```
 
 ## Distribution of Scores

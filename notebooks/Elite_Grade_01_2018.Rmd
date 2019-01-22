@@ -51,7 +51,7 @@ all.results <- bind_rows(map(years.seq, get.results))
 ## Overall Score
 
 ```{r overall}
-neg01 %>%
+all.results %>%
   mutate(rank.event = factor(rank.event)) %>%
   filter(event != 'indtotal') %>%
   filter(rank < 60) %>%
@@ -62,7 +62,8 @@ neg01 %>%
         axis.text.y = element_text(colour="grey20",size=6,angle=0,hjust=1,vjust=0,face="plain"),  
         axis.title.x = element_text(colour="grey20",size=14,angle=0,hjust=.5,vjust=0,face="plain"),
         axis.title.y = element_text(colour="grey20",size=14,angle=90,hjust=.5,vjust=.5,face="plain")) +
-  coord_flip() 
+  coord_flip() +
+  facet_grid(yyyy~.)
 
 ```
 
@@ -71,7 +72,7 @@ neg01 %>%
 ### Histogram
 
 ```{r histogram}
-neg01 %>% 
+all.results %>% 
   filter(event != 'indtotal') %>% 
   ggplot(aes(x=score, fill=event)) + 
   geom_histogram() +
@@ -81,11 +82,12 @@ neg01 %>%
 ### Boxplot
 
 ```{r boxplot}
-neg01 %>% 
+all.results %>% 
   filter(event != 'indtotal') %>% 
   ggplot(aes(x=event, y=score, fill=event)) + 
   geom_boxplot() +
-  geom_point()
+  geom_point() +
+  facet_grid(yyyy ~ .)
 ``` 
 plot(hclust(dist(t(neg01_raw[4:10])), method="ward.D"), main="Events", xlab="", ylab="", yaxt="n")
 

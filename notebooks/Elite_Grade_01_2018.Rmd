@@ -144,3 +144,9 @@ summary(model)
 ```
 
 summary(model1)
+
+## Simpler way to pull the data
+```{r concatenate_files}
+eg01 <- lapply(c(2013,2014,2015,2016,2017,2018,2019), 
+        function(x) {readr::read_csv(paste0("https://raw.githubusercontent.com/rdpapworth/Gymnastics/master/data/MAG_British_EG_01_", x, ".csv"))[,c('Floor','Pommel','Rings','Vault', 'P/Bars','H/Bar','PPP')]})
+```
